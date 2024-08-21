@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 
 st.header("📊 SQL Data Analysis on Sample Superstore data")
 
-df = pd.read_excel("C:/Users/ayush/Desktop/streamlit/Sample - Superstore (2) (1).xls")
+df = pd.read_excel("Sample - Superstore (2) (1).xls")
 st.dataframe(df)
 
 st.divider()
