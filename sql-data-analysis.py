@@ -7,7 +7,7 @@ st.set_page_config(layout="wide")
 
 st.header("📊 SQL Data Analysis on Sample Superstore data")
 
-df = pd.read_csv("Sample - Superstore (2) (1).csv",encoding='utf-8')
+df = pd.read_excel("Sample - Superstore (2) (1).xls")
 st.dataframe(df)
 
 st.divider()
