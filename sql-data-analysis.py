@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pandasql
 from pandasql import sqldf
+import openpyxl
 
 st.set_page_config(layout="wide")
 
