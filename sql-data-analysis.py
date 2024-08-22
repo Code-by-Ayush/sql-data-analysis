@@ -95,10 +95,18 @@ output6 = sqldf('''SELECT  `Order ID`,ROUND(SUM(Sales), 3) AS order_value FROM d
 st.write(output6)
 
 st.divider()
-st.code("")
-st.code("")
-output7 = sqldf('''''')
+st.code("Q7) Which segment’s order is more likely to be shipped via first class?")
+st.code("SELECT Segment,COUNT(`Order ID`) AS num_of_ordr FROM df WHERE `Ship Mode` = 'First Class' GROUP BY Segment ORDER BY num_of_ordr DESC;")
+output7 = sqldf('''SELECT Segment,COUNT(`Order ID`) AS num_of_ordr FROM df WHERE `Ship Mode` = 'First Class' GROUP BY Segment ORDER BY num_of_ordr DESC;''')
 st.write(output7)
+
+st.divider()
+st.code("Q8)  Which city is least contributing to total revenue?")
+st.code("SELECT City, ROUND(SUM(Sales), 3) AS TotalSales FROM df GROUP BY City ORDER BY TotalSales ASC LIMIT 1;")
+output8 = sqldf('''SELECT City, ROUND(SUM(Sales), 3) AS TotalSales FROM df GROUP BY City ORDER BY TotalSales ASC LIMIT 1;''')
+st.write(output8)
+
+st.divider()
 
 
 footer="""<style>
